@@ -1,0 +1,88 @@
+
+@import url(section1.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Catamaran", sans-serif;
+}
+
+:root{
+    --yellow-light: #DBC170;
+    --yellow: #B8952E;
+    --yellow-dark: #846F2E;
+
+
+    --gray-100:  #F5F4F5;
+    --gray-200: #B2AFB6;
+    --gray-300: #98959D;
+    --gray-400: #7A767F;
+    --gray-500: #3E3C41;
+    --gray-600: #2E2C30;
+    --gray-700: #232225;
+    --gray-800: #19181B;
+    --gray-900: #19181B;
+
+}
+
+ body{
+    display: grid;
+    grid-template-areas: "1 2 2 2";
+
+    background-color: var(--gray-800);
+    padding: 1rem;
+    gap: 1rem;
+    position: relative;
+ }
+
+ #schedule{
+    grid-column: 1;
+    background-color: var(--gray-700);
+
+    padding: 5rem;
+ }
+
+ #date{
+    grid-column: 2;
+
+    padding: 5rem;
+ }
+ h1{
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: var(--gray-100);
+ }
+
+ p{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    
+    color: var(--gray-300);
+
+ }
+ legend{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--gray-200);
+    padding-top: 2rem;
+
+ }
+
+ fieldset{
+    border: 0;
+ }
+button{
+    width: 100%;
+    background-color: var(--yellow);
+    color: var(--gray-900);
+
+    padding: 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+
+    margin-top: 1.5rem;
+}

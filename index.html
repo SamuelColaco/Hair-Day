@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <section id="schedule">
+
+        <span><img src="img/assets/logo.svg" alt="Logo do hairday"></span>
+        
+        <h1>Agende um atendimento</h1>
+        <p>Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
+
+        <form>
+            <fieldset>
+                <legend>Data</legend>
+                <input type="date" name="data" id="data">
+            </fieldset>
+            <fieldset>
+                <legend>Horários</legend>
+                <p>Manhã</p>
+                <div>
+                   <span> 09:00 <input type="checkbox" name="nove"></span>
+                    <span> 10:00 <input type="checkbox" name="dez"></span>
+                    <span> 11:00<input type="checkbox" name="onze"></span>
+                    <span> 12:00<input type="checkbox" name="doze"></span>
+                </div>
+                <p>Tarde</p>
+                <div>
+                    <span>
+                        13:00
+                        <input type="checkbox" name="treze">
+                    </span>                 
+                    <span>
+                        14:00
+                        <input type="checkbox" name="catorze">
+                    </span>                   
+                    <span>
+                        15:00
+                        <input type="checkbox" name="quinze">
+                    </span>                  
+                    <span>
+                        16:00
+                        <input type="checkbox" name="dezesseis">
+                    </span>
+                    <span>
+                        17:00
+                        <input type="checkbox" name="dezessete">
+                    </span>
+                    <span>
+                        18:00
+                        <input type="checkbox" name="dezoito">
+                    </span>               
+                </div>
+
+                <p>Noite</p>
+                <div>
+                    
+              <span> 
+                19:00
+                <input type="checkbox" name="dezenove">
+            </span>
+              <span> 
+                20:00
+                <input type="checkbox" name="vinte">
+            </span>            
+              <span>
+                21:00
+                <input type="checkbox" name="vinte-um">
+            </span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cliente</legend>
+                <input type="text" id="user" placeholder="Digite seu nome">
+            </fieldset>
+
+            
+            <button type="submit">AGENDAR</button>
+        </form>
+
+    </section>
+
+    <section id="date">
+        <p>2</p>
+    </section>
+
+</body>
+</html>

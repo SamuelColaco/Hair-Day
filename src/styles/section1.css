@@ -67,11 +67,12 @@
             }
         }
 
-        & span:has(input:focus), 
-        span:has(input:focus-within),
-         span:has(input:hover){
+        &  span:has(input:checked){
             border-color: var(--yellow);
             color: var(--yellow);      
+        }
+        & span:has(input:hover){
+            background-color: var(--gray-500);
         }
     }
 

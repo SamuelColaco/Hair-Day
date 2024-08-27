@@ -82,7 +82,17 @@ button{
     border-radius: 0.5rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
+    border: 3px solid var(--yellow);
     cursor: pointer;
 
     margin-top: 1.5rem;
+
+    transition: 0.2s ease-in-out;
 }
+button:hover{
+   border: 3px solid var(--yellow-light);
+}
+input{
+   outline: 0;
+}
+

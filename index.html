@@ -21,7 +21,10 @@
         <form>
             <fieldset>
                 <legend>Data</legend>
-                <input type="date" name="data" id="data">
+                <div>
+                    <img src="img/assets/date.svg" alt="calendário amarelo">
+                    <input type="date" name="data" id="data">
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Horários</legend>
@@ -80,7 +83,11 @@
 
             <fieldset>
                 <legend>Cliente</legend>
-                <input type="text" id="user" placeholder="Digite seu nome">
+                <div>
+                    <img src="img/assets/user-profile.svg" alt="perfil de usuario amarelo">
+                    <input type="text" id="user">
+                </div>
+                
             </fieldset>
 
             
@@ -90,7 +97,7 @@
     </section>
 
     <section id="date">
-        <div>
+        <div id="first-div-date">
             <div>
                 <h1>Sua agenda</h1>
                 <p>Consulte os seus cortes de cabelo agendados por dia</p>
@@ -98,32 +105,38 @@
             <input type="date" name="data2" id="data2">
         </div>
 
-        <div id="morning" class="time-calendar">
-            <div>
-                <img src="img/assets/sun.svg" alt="sol amarelo">
-               <p>Manhã</p> 
-            </div>
+        <div id="morning"  class="time-calendar">
+                    <div>
+                        <div>
+                            <img src="img/assets/sun.svg" alt="sol amarelo">
+                           <p>Manhã</p>
+                        </div>
+                        
+                        <p>09h-12h</p>
+                  </div>
 
-            <p>09h-12h</p>
+            
         </div>
 
         
         <div id="afternoon" class="time-calendar">
             <div>
-                <img src="img/assets/after-sun.svg" alt="sol amarelo com nuvem amarela">
-               <p>Tarde</p> 
+                <div>
+                    <img src="img/assets/after-sun.svg" alt="sol amarelo com nuvem amarela">
+                   <p>Tarde</p>
+                </div>
+                <p>13h-18h</p>
             </div>
-
-            <p>13h-18h</p>
         </div>
 
         <div id="night" class="time-calendar">
             <div>
-                <img src="img/assets/moon.svg" alt="lua amarela com estrelas amarelas">
-               <p>Noite</p> 
+                <div>
+                    <img src="img/assets/moon.svg" alt="lua amarela com estrelas amarelas">
+                   <p>Noite</p>
+                </div>
+                <p>19h-21h</p>
             </div>
-
-            <p>19h-21h</p>
         </div>
 
     </section>

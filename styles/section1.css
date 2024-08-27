@@ -8,16 +8,33 @@
 
     border-radius: 0.5rem;
 
+ & div:has(#data){
+     position: relative;
+     & #data{
+         border: 1px solid var(--gray-500);
+         background-color: transparent;
+         color: var(--gray-200);
+         
+         border-radius: 0.5rem;
+         padding: 0.75rem;
+         width: 100%;
+
+         padding-left: 2.5rem;
  
-    & #data{
-        border: 1px solid var(--gray-500);
-        background-color: transparent;
-        color: var(--gray-200);
-        
-        border-radius: 0.5rem;
-        padding: 0.75rem;
-        width: 100%;
+     }
+     & #data:focus, #data:focus-within{
+        border-color: var(--yellow-dark);
+     }
+
+     
+    & img{
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
     }
+
+ }
+
 
     & #user{
         background-color: transparent;
@@ -40,6 +57,7 @@
             background-color: var(--gray-600);
             border: 1px solid var(--gray-500);
             border-radius: 0.2rem;
+            transition: 0.2s ease-in-out;
             
             & input{
                 position: absolute;
@@ -47,6 +65,13 @@
                 inset: 0;
                 cursor: pointer;
             }
+        }
+
+        & span:has(input:focus), 
+        span:has(input:focus-within),
+         span:has(input:hover){
+            border-color: var(--yellow);
+            color: var(--yellow);      
         }
     }
 
@@ -66,12 +91,35 @@
         left: 0;
     }
 
+    & div:has(#user){
+        position: relative;
+
+        & input{
+            padding-left: 2.5rem;
+            color: var(--gray-200);
+            line-height: 1.5rem;
+        }
+        & input:focus, input:focus-within{
+            border-color: var(--yellow-dark);
+         }
+       & img{
+
+        position: absolute;
+        left: 1rem;
+        bottom: 1.15rem;
+
+       }
+
+
+
+    }
+
 }
 
 
 #date {
 
-    & > div{
+    & #first-div-date{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -94,24 +142,44 @@
         }
     }
 
-    & .time-calendar{
-        padding: 1rem;
+    & div.time-calendar{
+        display: flex;
+        flex-direction: column;
+   
+        border: 1px solid var(--gray-600);
+        border-radius: 0.5rem;
+        padding: 0.25rem;
 
+        margin-block: 2rem;
         & > div{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 0.5rem;
 
-            
+            padding: 0.3rem;
 
-            & img{
-                width: 1.25rem;
-                height: 1.25rem;
-            }
-  
-         
+            & > div{
+                display: flex;
+                gap: 0.5rem;
+    
+                }
+    
+    
+                & img{
+                    width: 1.25rem;
+                    height: 1.25rem;
+                }
         }
+
+        & .dates{
+            display: flex;
+            justify-content: left;
+            gap: 1rem;
+            padding: 1rem;
+
+        }
+
+      
     }
 }
 

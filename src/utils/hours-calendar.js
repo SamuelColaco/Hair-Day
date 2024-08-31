@@ -1,4 +1,5 @@
 
+import dayjs, { Dayjs } from "dayjs"
 
 export function dateHair(){
     const checkboxs = document.querySelectorAll('input[type = "checkbox"]')
@@ -6,7 +7,7 @@ export function dateHair(){
     const div = document.createElement("div")
     const strong = document.createElement("strong")
     const p = document.createElement("p")
-
+    
     div.classList.add("dates")
 
     const morning = document.querySelector("#morning")

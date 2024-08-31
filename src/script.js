@@ -14,6 +14,7 @@ import "./styles/section1.css"
 
 
 const form = document.querySelector("form")
+const data = document.querySelector("#data")
 
 form.onsubmit = (event) => {
     event.preventDefault()
@@ -21,6 +22,7 @@ form.onsubmit = (event) => {
     
     dateHair()
 }
+
 
 
 

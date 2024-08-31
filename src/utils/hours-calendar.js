@@ -6,63 +6,52 @@ export function dateHair(){
     const div = document.createElement("div")
     const strong = document.createElement("strong")
     const p = document.createElement("p")
-    const divCover = document.createElement("div")
 
     div.classList.add("dates")
 
     const morning = document.querySelector("#morning")
+    const afternoon = document.querySelector("#afternoon")
+    const night = document.querySelector("#night")
     try{
         if(value === ""){
             alert("Digite algo")
         }
-        
-        
         else{
             checkboxs.forEach((check) => {
                 if (check.checked){
                     let parent = check.parentNode
-                    switch(check.name){
-                        case "nove":
-                            p.textContent = value
-                            strong.textContent = parent.textContent
-                            div.append(p)
-                            div.append(strong)
-                            check.disabled = true
-                            check.checked = false
-                            morning.append(div)
-                            
-                            break
-                        case "dez":
-                            p.textContent = value
-                            strong.textContent = parent.textContent
-                            div.append(p)
-                            div.append(strong)
-                            check.disabled = true
-                            check.checked = false
-                            morning.append(div)
-                            break
-                        case "onze":
-                            p.textContent = value
-                            strong.textContent = parent.textContent
-                            div.append(p)
-                            div.append(strong)
-                            check.disabled = true
-                            check.checked = false
-                            morning.append(div)
-                            break
-                         case "doze":
-                            p.textContent = value
-                            strong.textContent = parent.textContent
-                            div.append(p)
-                            div.append(strong)
-                            check.disabled = true
-                            check.checked = false
-                            morning.append(div)
+                    if(Number(check.name) >=9 && Number(check.name) <= 12){
+                        p.textContent = value
+                        strong.textContent = parent.textContent
+                        div.append(p)
+                        div.append(strong)
+                        check.disabled = true
+                        check.checked = false
+                        morning.append(div)
+                   }
 
-                            
-                            break
-                         default:
-                            alert("Não foi de manhã")
+                   else if (Number(check.name) >=13 && Number(check.name) <= 18){
+                    p.textContent = value
+                    strong.textContent = parent.textContent
+                    div.append(p)
+                    div.append(strong)
+                    check.disabled = true
+                    check.checked = false
+                    afternoon.append(div)
+                   }
+
+                   else if(Number(check.name) >= 19 && Number(check.name) <=21){
+                    p.textContent = value
+                    strong.textContent = parent.textContent
+                    div.append(p)
+                    div.append(strong)
+                    check.disabled = true
+                    check.checked = false
+                    night.append(div)
+                   }
+
+                   else{
+                    alert("Não foi possivel localizar os horários")
                    }
                 }
             })

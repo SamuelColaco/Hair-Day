@@ -74,6 +74,14 @@
         & span:has(input:hover){
             background-color: var(--gray-500);
         }
+        & span:has(input:disabled){
+            background-color: var(--gray-600);
+            color: var(--gray-500);
+            & input{
+                cursor: not-allowed;
+
+            }
+        }
     }
 
     & fieldset:has(p){
@@ -175,8 +183,15 @@
         & .dates{
             display: flex;
             justify-content: left;
+            flex-direction: row-reverse;
             gap: 1rem;
             padding: 1rem;
+
+
+            & strong{
+                color: var(--gray-200);
+                font-weight: bold;
+            }
 
         }
 

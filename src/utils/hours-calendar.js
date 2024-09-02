@@ -1,15 +1,16 @@
 
 import dayjs, { Dayjs } from "dayjs"
+import { scheduleNew } from "../services/schedule-new"
 
 export function dateHair(){
+
     const checkboxs = document.querySelectorAll('input[type = "checkbox"]')
     const value = document.querySelector("#user").value
     const div = document.createElement("div")
     const strong = document.createElement("strong")
     const p = document.createElement("p")
-    const when = dayjs()
+    const date = dayjs()
     let id = new Date().getTime()
-    let nameClient = value.trim()
     
     div.classList.add("dates")
 
@@ -21,7 +22,7 @@ export function dateHair(){
             alert("Digite algo")
         }
         else{
-            checkboxs.forEach((check) => {
+            checkboxs.forEach( async (check) =>  {
                 if (check.checked){
                     let parent = check.parentNode
                     if(Number(check.name) >=9 && Number(check.name) <= 12){
@@ -57,7 +58,12 @@ export function dateHair(){
                    else{
                     alert("Não foi possivel localizar os horários")
                    }
-         
+                   await scheduleNew({
+                    id,
+                    value,
+                    date,
+                   })
+                   console.log(scheduleNew)
                 }
             })
 

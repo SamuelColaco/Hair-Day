@@ -20,7 +20,7 @@ const form = document.querySelector("form")
 
 
 
-form.onsubmit = (event) => {
+form.onsubmit =  (event) => {
     event.preventDefault()
 
     dateHair()

@@ -9,7 +9,7 @@ export function dateHair(){
     const div = document.createElement("div")
     const strong = document.createElement("strong")
     const p = document.createElement("p")
-    const date = dayjs()
+    const when = dayjs()
     let id = new Date().getTime()
     
     div.classList.add("dates")
@@ -61,9 +61,8 @@ export function dateHair(){
                    await scheduleNew({
                     id,
                     value,
-                    date,
+                    when,
                    })
-                   console.log(scheduleNew)
                 }
             })
 

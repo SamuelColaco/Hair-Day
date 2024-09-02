@@ -1,6 +1,8 @@
 
 import dayjs from "dayjs"
 import { loadContent } from "./load"
+import { schedulesByDay } from "../services/schedules-by-day"
+import { scheduleDate } from "./Date-day"
 
 const data = document.querySelector("#data")
 const dataNow = dayjs(new Date()).format("YYYY-MM-DD")
@@ -19,4 +21,8 @@ checkboxs.forEach((check) => {
    check.disabled = checkNumber <= Number(dayjs().format("HH"))
 })
 
-document.addEventListener("DOMContentLoaded", loadContent({date}))
+document.addEventListener("DOMContentLoaded",  async () =>{
+
+    scheduleDate()
+
+})

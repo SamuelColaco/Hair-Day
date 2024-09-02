@@ -8,6 +8,7 @@ import "./libs/dayjs.js"
 import  {dateHair} from "./utils/hours-calendar.js"
 
 import "./utils/Hours.js"
+import "./utils/load.js"
 
 //importando o css
 import "./styles/style.css"

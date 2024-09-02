@@ -6,6 +6,7 @@
 import "./libs/dayjs.js"
 
 import  {dateHair} from "./utils/hours-calendar.js"
+import { dateNew } from "./utils/Date-day.js"
 
 import "./utils/Hours.js"
 import "./utils/load.js"
@@ -14,16 +15,12 @@ import "./utils/load.js"
 import "./styles/style.css"
 import "./styles/section1.css"
 
-
-
 const form = document.querySelector("form")
-
-
 
 form.onsubmit =  (event) => {
     event.preventDefault()
 
-    dateHair()
+    dateNew()
 }
 
 

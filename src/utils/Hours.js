@@ -14,10 +14,9 @@ const checkboxs = document.querySelectorAll('input[type = "checkbox"]')
 
 checkboxs.forEach((check) => {
     const checkNumber = Number(check.name)
+
     
    check.disabled = checkNumber <= Number(dayjs().format("HH"))
-
-    console.log(Number(dayjs().format("HH")))
 })
 
-loadContent({data, date})
+document.addEventListener("DOMContentLoaded", loadContent({date}))

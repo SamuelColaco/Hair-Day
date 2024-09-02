@@ -7,6 +7,9 @@ export function dateHair(){
     const div = document.createElement("div")
     const strong = document.createElement("strong")
     const p = document.createElement("p")
+    const when = dayjs()
+    let id = new Date().getTime()
+    let nameClient = value.trim()
     
     div.classList.add("dates")
 
@@ -54,6 +57,7 @@ export function dateHair(){
                    else{
                     alert("Não foi possivel localizar os horários")
                    }
+         
                 }
             })
 

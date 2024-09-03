@@ -15,8 +15,10 @@ import "./utils/load.js"
 import "./styles/style.css"
 import "./styles/section1.css"
 
+//Iniciando variavel do formulário
 const form = document.querySelector("form")
 
+//Iniciando o evento de envio do formulário
 form.onsubmit =  (event) => {
     event.preventDefault()
 
